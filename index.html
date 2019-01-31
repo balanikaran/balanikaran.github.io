@@ -3,13 +3,15 @@
     <head>
         <title>"Karan Balani"</title>
         <script type="text/javascript" src="js/particles.min.js"></script>
+        <link rel="stylesheet" href="css/particle.css">
     </head>
 
-    <body>
-        <div id="particle-js"></div>
+    <body id="particle-js">
 
         <script type="text/javascript">
-            particlesJS.load("particles-js","config/particlesjs-config.json");
+            particlesJS.load('particle-js','config/particles.json', function(){
+                console.log("particles loaded...");
+            });
         </script>
     </body>
 </html>
