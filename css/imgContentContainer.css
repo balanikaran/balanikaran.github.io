@@ -1,0 +1,5 @@
+#img-content-container {
+    display: inline;
+    flex-direction: row;
+    align-content: center;
+}
