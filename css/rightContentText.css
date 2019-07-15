@@ -1,6 +1,6 @@
 #salutation-text {
   color: #000;
-  font-family: "Inconsolata", monospace;
+  font-family: "VT323", monospace;
   text-shadow: 1.5px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
   text-rendering: optimizeLegibility;
   text-transform: none;
@@ -10,36 +10,23 @@
 
 #name-text {
   color: #000;
-  font-family: "Inconsolata", monospace;
+  font-family: "VT323", monospace;
   text-shadow: 1.5px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
   text-size-adjust: 100%;
-  letter-spacing: 2px;
-  font-size: 25px;
-  font-weight: bolder;
+  letter-spacing: 3px;
+  font-weight: 900;
 }
 
 #brief-text {
   color: #000;
-  font-family: "Inconsolata", monospace;
-  text-shadow: 1.5px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+  font-family: "VT323", monospace;
+  text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: none;
-}
-
-#social-links-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  font-family: sans-serif;
-  justify-content: left;
-  text-align: left;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
+  font-weight: 400;
+  font-size: 22px;
 }
 
 .social-container {
