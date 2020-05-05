@@ -1,0 +1,65 @@
+{
+    "experiences": [
+        {
+            "name": "Accenture",
+            "role": "Full Stack Engineer",
+            "duration": "Present",
+            "logo": "accenture.png"
+        },
+        {
+            "name": "GLA University",
+            "role": "Computer Science & Engineering",
+            "duration": "Aug 2016 - May 2020",
+            "logo": "glauniversity.png"
+        }
+    ],
+    "extracurriculars": [
+        {
+            "name": "Google Code-In",
+            "role": "Mentor @ JBoss",
+            "duration": "Nov 2019 - Jan 2020",
+            "logo": "gcilogo.png"
+        },
+        {
+            "name": "TEDxGLAU",
+            "role": "Head of Branding and Promotions",
+            "duration": "Jun 2019 - Jan 2020",
+            "logo": "tedxglau.png"
+        },
+        {
+            "name": "Google Code-In",
+            "role": "Mentor @ JBoss",
+            "duration": "Oct 2018 - Dec 2018",
+            "logo": "gcilogo.png"
+        },
+        {
+            "name": "Coding Blocks",
+            "role": "Android Development Trainer",
+            "duration": "Jun 2018 - Jul 2018",
+            "logo": "codingblocks.png"
+        }
+    ],
+    "skills": {
+        "languages": [
+            "Python",
+            "Java",
+            "GoLang"
+        ],
+        "databases": [
+            "SQL",
+            "No-SQL"
+        ],
+        "cloudplatforms": [
+            "AWS",
+            "GCP"
+        ],
+        "more": [
+            "Firebase",
+            "Flutter",
+            "Heroku",
+            "Tkinter",
+            "Git",
+            "Android"
+        ]
+    }
+}
