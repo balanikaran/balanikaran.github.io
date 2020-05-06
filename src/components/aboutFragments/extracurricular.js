@@ -41,7 +41,7 @@ const Extracurricular = () => {
 
     return (
         <div className="extracurricularFragment">
-            <div className="extracurricularFragHeading">Extracurricular <span role="img" aria-label="experience">🏌</span></div>
+            <div className="extracurricularFragHeading">Extracurricular <span role="img" aria-label="extracurricular">🏌</span></div>
             <div className="extracurricularGrid">
                 {data.aboutJson.extracurriculars.map(extracurricular => {
 

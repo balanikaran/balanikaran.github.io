@@ -1,0 +1,16 @@
+@import "./variables";
+
+.footerDiv {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.footerHeading {
+    font-weight: bold;
+}

@@ -1,0 +1,28 @@
+@import "./variables";
+
+.contactDiv {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.contactHeading {
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.contactSection {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 120px 0px 120px;
+    @media (max-width: $mobileMax) {
+        padding: 20px 10px 0px 10px;
+    }
+}

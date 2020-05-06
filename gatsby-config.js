@@ -22,8 +22,8 @@ module.exports = {
         name: `Karan Balani`,
         short_name: `KB`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/images/web-kb.png`, // This path is relative to the root of the site.
       },

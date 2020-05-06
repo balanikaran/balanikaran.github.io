@@ -2,7 +2,7 @@ import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Card, Button } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import { FaGithub } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 
@@ -43,8 +43,8 @@ const Projects = () => {
     )
 
     return (
-        <div className="projectsDiv">
-            <div className="projectsHeading">Projects <span role="img" aria-label="experience">⚗️</span></div>
+        <div className="projectsDiv" id="projectsSectionId">
+            <div className="projectsHeading">Projects <span role="img" aria-label="projects">⚗️</span></div>
             <div className="projectsGrid">
                 {data.projectsJson.projects.map(project => {
 
@@ -67,7 +67,7 @@ const Projects = () => {
                                 <Card.Body>
                                     <Card.Title className="projectTitleText">{project.name}</Card.Title>
                                     <Card.Text className="projectDescriptionText">{project.description}</Card.Text>
-                                    <a target="_blank" href={project.url} class="btn btn-outline-dark">
+                                    <a target="_blank" rel="noopener noreferrer" href={project.url} className="btn btn-outline-dark">
                                         <IconContext.Provider value={{ size: "1.5rem" }}>
                                             <FaGithub /> GitHub
                                         </IconContext.Provider>
@@ -80,7 +80,7 @@ const Projects = () => {
                 })}
             </div>
             <div className="projectsGithubLinkButtonDiv">
-                <a target="_blank" href="https://github.com/krnblni" class="btn btn-outline-dark btn-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/krnblni" className="btn btn-outline-dark btn-block">
                     <IconContext.Provider value={{ size: "1.5rem" }}>
                         Explore more of my experiments on my <FaGithub /> GitHub profile
                     </IconContext.Provider>
