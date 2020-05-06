@@ -1,0 +1,38 @@
+@import "./variables";
+
+.projectsDiv {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.projectsHeading {
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 30px;
+    @media (max-width: $mobileMax) {
+        gap: 20px;
+    }
+}
+
+.projectCardImgDiv {
+    margin: 20px 20px 0px 20px;
+}
+
+.projectTitleText {
+    font-size: 1.5rem;
+}
+
+.projectsGithubLinkButtonDiv {
+    margin-top: 35px;
+}

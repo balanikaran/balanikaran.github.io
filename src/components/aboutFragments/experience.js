@@ -41,7 +41,7 @@ const Experience = () => {
 
     return (
         <div className="experienceFragment">
-            <div className="experienceFragHeading">Experience</div>
+            <div className="experienceFragHeading">Experience <span role="img" aria-label="experience">💻</span></div>
             <div className="experienceGrid">
                 {data.aboutJson.experiences.map(experience => {
 
