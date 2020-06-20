@@ -8,7 +8,7 @@
         },
         {
             "name": "Serverless Twitter Backend Clone",
-            "description": "A serverless architecture clone written JS and hosted on Firebase for providing Twitter like functionalities such as post, comment, uplaod profile, add bio, like, notify, etc.",
+            "description": "A serverless architecture clone written JS and hosted on Firebase for providing Twitter like functionalities such as post, comment, upload profile photo, add bio, like/unlike, notify, etc.",
             "url": "https://github.com/krnblni/JASAP-Cloud-Functions",
             "logo": "jasapbackend.png"
         },
