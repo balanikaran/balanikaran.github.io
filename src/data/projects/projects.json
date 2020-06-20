@@ -1,6 +1,18 @@
 {
     "projects": [
         {
+            "name": "Chillao - Twitter Clone",
+            "description": "A twitter like social app written in React with Redux. Features minimalistic UI with functionalities for adding posts, comments, likes, etc, specific notifications and user bio. Do check out the GitHub Repository for Screenshots and Video Demo.",
+            "url": "https://github.com/krnblni/Chillao-Social-App",
+            "logo": "chillao.png"
+        },
+        {
+            "name": "Serverless Twitter Backend Clone",
+            "description": "A serverless architecture clone written JS and hosted on Firebase for providing Twitter like functionalities such as post, comment, uplaod profile, add bio, like, notify, etc.",
+            "url": "https://github.com/krnblni/JASAP-Cloud-Functions",
+            "logo": "jasapbackend.png"
+        },
+        {
             "name": "United Shield Space",
             "description": "A monolithic architecture based Public Cloud with GoLang Backend and Python Frontend communicating over gRPC, providing encrypted text file storage.",
             "url": "https://github.com/krnblni/UnitedShieldSpace",
