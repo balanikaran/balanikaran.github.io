@@ -15,6 +15,12 @@
     ],
     "extracurriculars": [
         {
+            "name": "Cloud Computing & Virtualization",
+            "role": "Graduate Badge Issued by IBM",
+            "duration": "May 2020",
+            "logo": "ccvbadge.png"
+        },
+        {
             "name": "Google Code-In",
             "role": "Mentor @ JBoss",
             "duration": "Nov 2019 - Jan 2020",
