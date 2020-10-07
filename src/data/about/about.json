@@ -3,8 +3,14 @@
         {
             "name": "Accenture",
             "role": "Full Stack Engineer",
-            "duration": "Upcoming",
+            "duration": "Sep 2020 - Present",
             "logo": "accenture.png"
+        },
+        {
+            "name": "FinBox",
+            "role": "Backend Engineering Intern",
+            "duration": "Jul 2020 - Sep 2020",
+            "logo": "finbox.png"
         },
         {
             "name": "GLA University",
