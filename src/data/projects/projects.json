@@ -1,34 +1,46 @@
 {
     "projects": [
         {
+            "name": "Instagram Year Progress Bot",
+            "description": "An automation written using TypeScript and Python to work in harmony and post daily updates on Instagram handle @yearprogress about the completed year percentage and inspirational quotes.",
+            "url": "https://instagram.com/yearprogress",
+            "logo": "yearprogressbot.png",
+            "icon": "FaInstagram"
+        },
+        {
             "name": "Chillao - Twitter Clone",
             "description": "A twitter like social app written in React with Redux. Features minimalistic UI with functionalities for adding posts, comments, likes, etc, specific notifications and user bio. Do check out the GitHub Repository for Screenshots and Video Demo.",
             "url": "https://github.com/krnblni/Chillao-Social-App",
-            "logo": "chillao.png"
+            "logo": "chillao.png",
+            "icon": "FaGithub"
         },
         {
             "name": "Serverless Twitter Backend Clone",
             "description": "A serverless architecture clone written JS and hosted on Firebase for providing Twitter like functionalities such as post, comment, upload profile photo, add bio, like/unlike, notify, etc.",
             "url": "https://github.com/krnblni/JASAP-Cloud-Functions",
-            "logo": "jasapbackend.png"
+            "logo": "jasapbackend.png",
+            "icon": "FaGithub"
         },
         {
             "name": "United Shield Space",
             "description": "A monolithic architecture based Public Cloud with GoLang Backend and Python Frontend communicating over gRPC, providing encrypted text file storage.",
             "url": "https://github.com/krnblni/UnitedShieldSpace",
-            "logo": "unitedshieldspace.png"
+            "logo": "unitedshieldspace.png",
+            "icon": "FaGithub"
         },
         {
             "name": "GLAU FireAuth",
             "description": "An App for automatic firewall authentication within GLA University's Network for seamless Internet connectivity.",
-            "url": "https://github.com/krnblni/GLAUFirewallAuthenticator",
-            "logo": "glaufireauth.png"
+            "url": "https://play.google.com/store/apps/details?id=com.krnblni.evetech.glaufirewallauthenticator",
+            "logo": "glaufireauth.png",
+            "icon": "FaGooglePlay"
         },
         {
             "name": "NAG Rescue App",
             "description": "An app in flutter which creates a database in Firebase Firestore about the important items available nearby to users required in disasterous conditions.",
             "url": "https://github.com/krnblni/NAG-RescueAppTemplateProject",
-            "logo": "flutter.png"
+            "logo": "flutter.png",
+            "icon": "FaGithub"
         }
     ]
 }

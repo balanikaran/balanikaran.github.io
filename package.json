@@ -3,7 +3,7 @@
   "private": true,
   "description": "Portfolio for Karan Balani @krnblni",
   "version": "0.1.0",
-  "author": "Karan Balani <karanbalani007@gmail.com>",
+  "author": "Karan Balani <karankbalani@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "gatsby": "^2.21.0",
