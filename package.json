@@ -1,7 +1,7 @@
 {
-  "name": "krnblni-gatsby-portfolio",
+  "name": "karan-balani-gatsby-portfolio",
   "private": true,
-  "description": "Portfolio for Karan Balani @krnblni",
+  "description": "Portfolio for Karan Balani @balanikaran | @krnblni",
   "version": "0.1.0",
   "author": "Karan Balani <karankbalani@gmail.com>",
   "dependencies": {
@@ -32,7 +32,20 @@
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "karan",
+    "balani",
+    "karanbalani",
+    "krnblni",
+    "balanikaran",
+    "accenture",
+    "glau",
+    "glauniversity",
+    "fireauth",
+    "glaufireauth",
+    "yearprogressbot",
+    "yearprogress",
+    "finbox"
   ],
   "license": "MIT",
   "scripts": {

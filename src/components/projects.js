@@ -120,7 +120,7 @@ const Projects = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/krnblni"
+          href="https://github.com/balanikaran"
           className="btn btn-outline-dark btn-block"
         >
           <IconContext.Provider value={{ size: "1.5rem" }}>

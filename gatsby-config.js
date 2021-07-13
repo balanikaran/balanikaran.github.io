@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Karan Balani`,
     description: `Karan's Personal Portfolio Website.`,
-    author: `@krnblni`,
+    author: `@balanikaran`,
+    twitterUsername: "karanbalani_",
+    keywords:
+      "karan, balani, karan balani, karanbalani, balanikaran, balani karan, accenture, finbox, krnblni, glau, glauniversity, fireauth, glaufireauth, year progress, yearprogress, yearprogressbot, karan balani accenture, karan balani finbox, karan balani instagram, karan balani twitter, karan balani developer, karan balani delhi, karan balani india, karan balani finbox, karan balani github, krnblni accenture, karan balani linkedin, krnblni instagram, krnblni linkedin, krnblni twitter, karan balani gla university, krnblni github, balani karan github, karanbalani_",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,7 +37,7 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data/`,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -46,7 +49,7 @@ module.exports = {
         pageTransitionDelay: 0,
         defer: false,
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -10,21 +10,21 @@
         {
             "name": "Chillao - Twitter Clone",
             "description": "A twitter like social app written in React with Redux. Features minimalistic UI with functionalities for adding posts, comments, likes, etc, specific notifications and user bio. Do check out the GitHub Repository for Screenshots and Video Demo.",
-            "url": "https://github.com/krnblni/Chillao-Social-App",
+            "url": "https://github.com/balanikaran/Chillao-Social-App",
             "logo": "chillao.png",
             "icon": "FaGithub"
         },
         {
             "name": "Serverless Twitter Backend Clone",
             "description": "A serverless architecture clone written JS and hosted on Firebase for providing Twitter like functionalities such as post, comment, upload profile photo, add bio, like/unlike, notify, etc.",
-            "url": "https://github.com/krnblni/JASAP-Cloud-Functions",
+            "url": "https://github.com/balanikaran/JASAP-Cloud-Functions",
             "logo": "jasapbackend.png",
             "icon": "FaGithub"
         },
         {
             "name": "United Shield Space",
             "description": "A monolithic architecture based Public Cloud with GoLang Backend and Python Frontend communicating over gRPC, providing encrypted text file storage.",
-            "url": "https://github.com/krnblni/UnitedShieldSpace",
+            "url": "https://github.com/balanikaran/UnitedShieldSpace",
             "logo": "unitedshieldspace.png",
             "icon": "FaGithub"
         },
@@ -38,7 +38,7 @@
         {
             "name": "NAG Rescue App",
             "description": "An app in flutter which creates a database in Firebase Firestore about the important items available nearby to users required in disasterous conditions.",
-            "url": "https://github.com/krnblni/NAG-RescueAppTemplateProject",
+            "url": "https://github.com/balanikaran/NAG-RescueAppTemplateProject",
             "logo": "flutter.png",
             "icon": "FaGithub"
         }
