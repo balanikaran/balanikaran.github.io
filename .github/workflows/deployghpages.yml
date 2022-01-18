@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      gatsby-revamp
+
+jobs:
+  deploy_portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the latest code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17
+      
+      - name: Install `gh-pages` Node Package
+        run: npm install gh-pages --save-dev
+
+      - name: Deploy to `master` branch
+        env:
+          DEPLOYMENT_VIA_GITHUB_ACTION_TOKEN: ${{ secrets.DEPLOYMENT_VIA_GITHUB_ACTION_TOKEN }}
+        run: npm run deploy-gh-action
+
