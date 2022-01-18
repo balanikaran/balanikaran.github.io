@@ -20,6 +20,12 @@ jobs:
       - name: Install `gh-pages` Node Package
         run: npm install gh-pages --save-dev
 
+      - name: Config Git Username
+        run: git config user.name "${{ secrets.GH_USERNAME }}"
+
+      - name: Config Git Email
+        run: git config user.email "${{ secrets.GH_EMAIL }}"
+
       - name: Deploy to `master` branch
         env:
           DEPLOYMENT_VIA_GITHUB_ACTION_TOKEN: ${{ secrets.DEPLOYMENT_VIA_GITHUB_ACTION_TOKEN }}
