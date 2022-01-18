@@ -1,8 +1,8 @@
 import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { Card } from "react-bootstrap"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Experience = () => {
   const data = useStaticQuery(
@@ -19,18 +19,18 @@ const Experience = () => {
 
         placeholderImage: file(relativePath: { eq: "placeholder.png" }) {
           childImageSharp {
-            fixed(width: 80, height: 80) {
-              ...GatsbyImageSharpFixed
-            }
+            gatsbyImageData(layout: FIXED, width: 80, height: 80)
           }
         }
 
         images: allImageSharp {
           edges {
             node {
-              fixed(width: 80, height: 80) {
-                ...GatsbyImageSharpFixed
-                originalName
+              gatsbyImageData(layout: FIXED, width: 80, height: 80)
+              parent {
+                ... on File {
+                  base
+                }
               }
             }
           }
@@ -50,20 +50,19 @@ const Experience = () => {
       <div className="experienceGrid">
         {data.aboutJson.experiences.map(experience => {
           var imageFixed = data.images.edges.find(
-            edge => edge.node.fixed.originalName === experience.logo
+            edge => edge.node.parent.base === experience.logo
           )
-
           if (imageFixed === undefined) {
-            imageFixed = data.placeholderImage.childImageSharp.fixed
+            imageFixed = data.placeholderImage.childImageSharp.gatsbyImageData
           } else {
-            imageFixed = imageFixed.node.fixed
+            imageFixed = imageFixed.node.gatsbyImageData
           }
 
           return (
             <Card key={experience.duration}>
               <div className="experienceCard">
                 <div className="experienceCardImgDiv">
-                  <Img fixed={imageFixed}></Img>
+                  <GatsbyImage image={imageFixed} alt=""></GatsbyImage>
                 </div>
                 <Card.Body>
                   <Card.Title className="experienceTitleText">

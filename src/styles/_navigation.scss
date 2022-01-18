@@ -5,11 +5,15 @@
 }
 
 .navbarBrand {
-  margin-left: 0.75rem; // because of cosmetics and bootstrap 5
   font-weight: 600;
   font-size: x-large;
+  @media (max-width: $mobileMax) {
+    margin-left: 0.75rem; // because of cosmetics and bootstrap 5
+  }
 }
 
 .navLink {
-  margin-left: 0.75rem; // because of cosmetics and bootstrap 5
+  @media (max-width: $mobileMax) {
+    margin-left: 0.75rem; // because of cosmetics and bootstrap 5
+  }
 }
