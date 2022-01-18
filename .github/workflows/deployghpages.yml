@@ -29,5 +29,5 @@ jobs:
         run: npm run build
 
       - name: Deploy to `master` using `gh-pages`
-        run: npm run deploy-gh-action -- github-actions-bot <support+actions@github.com>
+        run: npm run deploy-gh-action -- "github-actions-bot <support+actions@github.com>"
 
