@@ -1,8 +1,8 @@
 import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { Card } from "react-bootstrap"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Extracurricular = () => {
   const data = useStaticQuery(
@@ -19,18 +19,18 @@ const Extracurricular = () => {
 
         placeholderImage: file(relativePath: { eq: "placeholder.png" }) {
           childImageSharp {
-            fixed(width: 80, height: 80) {
-              ...GatsbyImageSharpFixed
-            }
+            gatsbyImageData(layout: FIXED, width: 80, height: 80)
           }
         }
 
         images: allImageSharp {
           edges {
             node {
-              fixed(width: 80, height: 80) {
-                ...GatsbyImageSharpFixed
-                originalName
+              gatsbyImageData(layout: FIXED, width: 80, height: 80)
+              parent {
+                ... on File {
+                  base
+                }
               }
             }
           }
@@ -50,20 +50,20 @@ const Extracurricular = () => {
       <div className="extracurricularGrid">
         {data.aboutJson.extracurriculars.map(extracurricular => {
           var imageFixed = data.images.edges.find(
-            edge => edge.node.fixed.originalName === extracurricular.logo
+            edge => edge.node.parent.base === extracurricular.logo
           )
 
           if (imageFixed === undefined) {
-            imageFixed = data.placeholderImage.childImageSharp.fixed
+            imageFixed = data.placeholderImage.childImageSharp.gatsbyImageData
           } else {
-            imageFixed = imageFixed.node.fixed
+            imageFixed = imageFixed.node.gatsbyImageData
           }
 
           return (
             <Card key={extracurricular.duration}>
               <div className="extracurricularCard">
                 <div className="extracurricularCardImgDiv">
-                  <Img fixed={imageFixed}></Img>
+                  <GatsbyImage image={imageFixed} alt=""></GatsbyImage>
                 </div>
                 <Card.Body>
                   <Card.Title className="extracurricularTitleText">

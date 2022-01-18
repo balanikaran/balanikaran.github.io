@@ -2,7 +2,7 @@
 import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Header = () => {
   const data = useStaticQuery(
@@ -11,9 +11,7 @@ const Header = () => {
         headerImage: file(relativePath: { eq: "web-kb.png" }) {
           id
           childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
@@ -23,7 +21,10 @@ const Header = () => {
   return (
     <div className="heading">
       <div className="headerImage">
-        <Img fluid={data.headerImage.childImageSharp.fluid}></Img>
+        <GatsbyImage
+          image={data.headerImage.childImageSharp.gatsbyImageData}
+          alt=""
+        ></GatsbyImage>
       </div>
       <div className="headerText">
         <h1 className="headerName">

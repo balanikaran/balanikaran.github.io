@@ -1,7 +1,7 @@
 import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Card } from "react-bootstrap"
 import { FaGithub, FaInstagram, FaGooglePlay } from "react-icons/fa"
 import { IconContext } from "react-icons"
@@ -22,18 +22,18 @@ const Projects = () => {
 
         placeholderImage: file(relativePath: { eq: "placeholder.png" }) {
           childImageSharp {
-            fixed(width: 120, height: 120) {
-              ...GatsbyImageSharpFixed
-            }
+            gatsbyImageData(layout: FIXED, width: 120, height: 120)
           }
         }
 
         images: allImageSharp {
           edges {
             node {
-              fixed(width: 120, height: 120) {
-                ...GatsbyImageSharpFixed
-                originalName
+              gatsbyImageData(layout: FIXED, width: 120, height: 120)
+              parent {
+                ... on File {
+                  base
+                }
               }
             }
           }
@@ -78,20 +78,20 @@ const Projects = () => {
       <div className="projectsGrid">
         {data.projectsJson.projects.map(project => {
           var imageFixed = data.images.edges.find(
-            edge => edge.node.fixed.originalName === project.logo
+            edge => edge.node.parent.base === project.logo
           )
 
           if (imageFixed === undefined) {
-            imageFixed = data.placeholderImage.childImageSharp.fixed
+            imageFixed = data.placeholderImage.childImageSharp.gatsbyImageData
           } else {
-            imageFixed = imageFixed.node.fixed
+            imageFixed = imageFixed.node.gatsbyImageData
           }
 
           return (
             <Card key={project.url}>
               <div className="projectCard">
                 <div className="projectCardImgDiv">
-                  <Img fixed={imageFixed}></Img>
+                  <GatsbyImage image={imageFixed} alt=""></GatsbyImage>
                 </div>
                 <Card.Body>
                   <Card.Title className="projectTitleText">
