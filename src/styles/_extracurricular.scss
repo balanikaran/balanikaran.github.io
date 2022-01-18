@@ -1,47 +1,47 @@
 @import "./variables";
 
 .extracurricularFragment {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .extracurricularFragHeading {
-    font-size: 1.7rem;
-    text-align: center;
-    padding: 20px;
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 20px;
 }
 
 .extracurricularGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    gap: 30px;
-    @media (max-width: $mobileMax) {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 30px;
+  @media (max-width: $mobileMax) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .extracurricularCard {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .extracurricularCardImgDiv {
-    margin: 10px 5px 10px 10px;
-    display: flex;
+  margin: 10px 5px 10px 10px;
+  display: flex;
 }
 
 .extracurricularRoleText {
-    margin: 0px;
-    font-size: 0.9rem;
+  margin: 0px;
+  font-size: 0.9rem;
 }
 
 .extracurricularTitleText {
-    margin: 0px;
+  margin: 0px;
 }
 
 .extracurricularDurationText {
-    margin: 0px;
-    font-size: 0.8rem;
+  margin: 0px;
+  font-size: 0.8rem;
 }

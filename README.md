@@ -1,8 +1,11 @@
 # Portfolio for Karan Balani [HERE](https://krnblni.github.io)
+
 ## Build with Gatsby.js and obviously <3
 
 #
+
 #
+
 #
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->

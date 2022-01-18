@@ -15,9 +15,13 @@ const Navigation = () => {
           💭🔦
         </span>
       </Navbar.Toggle>
-      <Navbar.Collapse id="navbar">
+      <Navbar.Collapse id="navbar" className="justify-content-end">
         <Nav className="ml-auto">
-          <Nav.Link onClick={() => scrollToSection("aboutSectionId")} href="#">
+          <Nav.Link
+            onClick={() => scrollToSection("aboutSectionId")}
+            href="#"
+            className="navLink"
+          >
             About{" "}
             <span role="img" aria-label="about">
               🙋
@@ -26,6 +30,7 @@ const Navigation = () => {
           <Nav.Link
             onClick={() => scrollToSection("projectsSectionId")}
             href="#"
+            className="navLink"
           >
             Projects{" "}
             <span role="img" aria-label="projects">
@@ -35,13 +40,24 @@ const Navigation = () => {
           <Nav.Link
             onClick={() => scrollToSection("contactSectionId")}
             href="#"
+            className="navLink"
           >
             Contact{" "}
             <span role="img" aria-label="contact">
               🍻
             </span>
           </Nav.Link>
-          {/* <Nav.Link>Blog <span role="img" aria-label="blog">✍️</span></Nav.Link> */}
+          <Nav.Link
+            href="https://sevenbits.hashnode.dev/"
+            target={"_blank"}
+            rel={"noopener noreferrer"}
+            className="navLink"
+          >
+            Blog{" "}
+            <span role="img" aria-label="blog">
+              ✍️
+            </span>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -1,6 +1,13 @@
 // $fontFamilyDancingScript: 'Dancing Script', cursive !important;
 // $fontFamilyMontserrat: 'Montserrat', sans-serif !important;
 // $fontFamilyOpenSans: 'Open Sans', sans-serif !important;
-$fontFamilyRobotoMono: 'Roboto Mono', monospace !important;
-$mobileMin: '450px';
-$mobileMax: '950px';
+$fontFamilyRobotoMono: "Roboto Mono", monospace !important;
+$mobileMin: "450px";
+$mobileMax: "950px";
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1140px // was 1320px,
+);
