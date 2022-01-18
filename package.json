@@ -48,7 +48,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build && gh-pages -d public -b master",
-    "deploy-gh-action": "gatsby build && gh-pages -d public -b master -r https://$DEPLOYMENT_VIA_GITHUB_ACTION_TOKEN@github.com/balanikaran/balanikaran.github.io.git"
+    "deploy-gh-action": "gh-pages -d public -b master -u"
   },
   "repository": {
     "type": "git",
