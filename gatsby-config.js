@@ -5,7 +5,7 @@ module.exports = {
     author: `@balanikaran`,
     twitterUsername: "karanbalani_",
     keywords:
-      "karan, balani, karan balani, karanbalani, balanikaran, balani karan, accenture, finbox, krnblni, glau, glauniversity, fireauth, glaufireauth, year progress, yearprogress, yearprogressbot, karan balani accenture, karan balani finbox, karan balani instagram, karan balani twitter, karan balani developer, karan balani delhi, karan balani india, karan balani finbox, karan balani github, krnblni accenture, karan balani linkedin, krnblni instagram, krnblni linkedin, krnblni twitter, karan balani gla university, krnblni github, balani karan github, karanbalani_",
+      "karan, balani, karan balani, karanbalani, balanikaran, balani karan, accenture, finbox, krnblni, glau, glauniversity, fireauth, glaufireauth, year progress, yearprogress, yearprogressbot, karan balani accenture, karan balani finbox, karan balani instagram, karan balani twitter, karan balani developer, karan balani delhi, karan balani india, karan balani finbox, karan balani github, krnblni accenture, karan balani linkedin, krnblni instagram, krnblni linkedin, krnblni twitter, karan balani gla university, krnblni github, balani karan github, karanbalani_, karanbalanii",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
