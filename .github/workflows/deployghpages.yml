@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 17
+          node-version: 18
       
       - name: Install `gh-pages` Node Package
         run: npm install gh-pages --save-dev
