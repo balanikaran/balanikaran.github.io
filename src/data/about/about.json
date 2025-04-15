@@ -2,8 +2,14 @@
   "experiences": [
     {
       "name": "FinBox",
+      "role": "Senior Software Engineer",
+      "duration": "Jun 2024 - Apr 2025",
+      "logo": "finbox_new.png"
+    },
+    {
+      "name": "FinBox",
       "role": "Backend Engineer",
-      "duration": "Aug 2021 - Present",
+      "duration": "Aug 2021 - Jun 2024",
       "logo": "finbox_new.png"
     },
     {
