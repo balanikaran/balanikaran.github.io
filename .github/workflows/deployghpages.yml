@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 23
+          node-version: 22
       
       - name: Install `gh-pages` Node Package
         run: npm install gh-pages --save-dev
