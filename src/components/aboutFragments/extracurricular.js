@@ -19,14 +19,14 @@ const Extracurricular = () => {
 
         placeholderImage: file(relativePath: { eq: "placeholder.png" }) {
           childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 80, height: 80)
+            gatsbyImageData(width: 80, height: 80)
           }
         }
 
         images: allImageSharp {
           edges {
             node {
-              gatsbyImageData(layout: FIXED, width: 80, height: 80)
+              gatsbyImageData(width: 80, height: 80)
               parent {
                 ... on File {
                   base

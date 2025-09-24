@@ -1,10 +1,8 @@
 import React from "react"
-import SEO from "../components/seo"
 import { Link } from "gatsby"
 
 const NotFoundPage = () => (
   <div className="fourOFourDiv">
-    <SEO title="404: Not found" />
     <h1>
       NOT FOUND{" "}
       <span role="img" aria-label="yawn">
@@ -28,3 +26,11 @@ const NotFoundPage = () => (
 )
 
 export default NotFoundPage
+
+// Add Head API for meta tags
+export const Head = () => (
+  <>
+    <title>404: Not found | Karan Balani</title>
+    <meta name="description" content="Page not found - Karan Balani's Portfolio" />
+  </>
+)

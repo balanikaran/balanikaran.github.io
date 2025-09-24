@@ -4,11 +4,9 @@ module.exports = {
     description: `Karan's Personal Portfolio Website.`,
     author: `@balanikaran`,
     twitterUsername: "karanbalani_",
-    keywords:
-      "karan, balani, karan balani, karanbalani, balanikaran, balani karan, accenture, finbox, krnblni, glau, glauniversity, fireauth, glaufireauth, year progress, yearprogress, yearprogressbot, karan balani accenture, karan balani finbox, karan balani instagram, karan balani twitter, karan balani developer, karan balani delhi, karan balani india, karan balani finbox, karan balani github, krnblni accenture, karan balani linkedin, krnblni instagram, krnblni linkedin, krnblni twitter, karan balani gla university, krnblni github, balani karan github, karanbalani_, karanbalanii",
+    keywords: "karan balani, karanbalani, developer, finbox, accenture, portfolio, gatsby, react",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,14 +47,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "UA-144186313-1",
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-        pageTransitionDelay: 0,
-        defer: false,
+        trackingIds: [
+          "UA-144186313-1", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

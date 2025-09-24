@@ -22,14 +22,14 @@ const Projects = () => {
 
         placeholderImage: file(relativePath: { eq: "placeholder.png" }) {
           childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 120, height: 120)
+            gatsbyImageData(width: 120, height: 120)
           }
         }
 
         images: allImageSharp {
           edges {
             node {
-              gatsbyImageData(layout: FIXED, width: 120, height: 120)
+              gatsbyImageData(width: 120, height: 120)
               parent {
                 ... on File {
                   base

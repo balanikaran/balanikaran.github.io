@@ -4,14 +4,16 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
-// seting default font-family for bootstrap components
-$font-family-base: "Roboto Mono", monospace;
-
 // import variables before anything else
 @import "./variables";
 
+// seting default font-family for bootstrap components
+$font-family-base: "Roboto Mono", monospace;
+
 // importing Bootstrap scss
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// import bootstrap variables
 @import "../../node_modules/bootstrap/scss/variables";
 
 @import "./navigation";
