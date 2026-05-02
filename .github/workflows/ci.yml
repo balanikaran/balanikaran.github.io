@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-      - feat/move-to-astro
 
 permissions:
   contents: read
