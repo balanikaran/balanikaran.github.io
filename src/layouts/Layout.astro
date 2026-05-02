@@ -5,14 +5,50 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.css"
 
 const {
-  title = "Karan Balani | balanikaran",
-  description = "Karan's Personal Website.",
-  keywords = "karan balani, karanbalani, developer, finbox, accenture, portfolio, astro",
+  title = "Karan Balani - Backend & Infrastructure Engineer",
+  description = "Backend and infrastructure engineer building observability, developer tooling, and privacy-conscious systems.",
 } = Astro.props
 
 const siteUrl = Astro.site ?? new URL(Astro.url.origin)
+const homeUrl = new URL("/", siteUrl)
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl)
 const socialImageUrl = new URL(webKb.src, siteUrl)
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${homeUrl.href}#person`,
+      name: "Karan Balani",
+      url: homeUrl.href,
+      image: socialImageUrl.href,
+      jobTitle: "Backend and Infrastructure Engineer",
+      knowsAbout: [
+        "Backend engineering",
+        "Infrastructure",
+        "Observability",
+        "Developer tools",
+        "Privacy-conscious systems",
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/balanikaran",
+        "https://www.github.com/balanikaran",
+        "https://www.instagram.com/karanbalanii",
+        "https://sevenbits.hashnode.dev/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${homeUrl.href}#website`,
+      name: "Karan Balani",
+      url: homeUrl.href,
+      description,
+      publisher: {
+        "@id": `${homeUrl.href}#person`,
+      },
+    },
+  ],
+}
 ---
 
 <!doctype html>
@@ -69,25 +105,29 @@ const socialImageUrl = new URL(webKb.src, siteUrl)
     </script>
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
     <meta name="author" content="@balanikaran" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/png" href={webKb.src} />
 
-    <meta property="og:title" content="Karan Balani" />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={socialImageUrl} />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="karanbalani_" />
-    <meta name="twitter:title" content="Karan Balani" />
+    <meta name="twitter:creator" content="balaniikaran" />
+    <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageUrl} />
     <meta
       name="google-site-verification"
       content="QwimcVG7Pjp3RAmephvUeHDTnOTNmXC97-RNNi6ir9w"
+    />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
     />
   </head>
   <body>

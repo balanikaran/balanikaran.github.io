@@ -1,9 +1,11 @@
 import { defineConfig } from "astro/config"
+import sitemap from "@astrojs/sitemap"
 import icon from "astro-icon"
 
 export default defineConfig({
-  site: "https://karanbalani.com",
+  site: "https://karanbalani.tech",
   integrations: [
+    sitemap(),
     icon({
       svgoOptions: {
         plugins: [
