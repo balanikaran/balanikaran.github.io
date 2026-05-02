@@ -31,9 +31,12 @@ jobs:
         with:
           node-version: 22.12.0
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+          run_install: false
 
       - name: Audit production dependencies
-        run: corepack pnpm audit --prod --audit-level moderate
+        run: pnpm audit --prod --audit-level moderate
         continue-on-error: true
