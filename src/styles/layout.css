@@ -27,6 +27,12 @@ body {
     color 180ms ease;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 button {
   outline: none !important;
 }
@@ -35,32 +41,68 @@ a {
   outline: none !important;
 }
 
-.card {
-  background-color: var(--kb-surface);
-  color: var(--kb-text);
-  border-color: var(--kb-border);
+.siteContainer {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
 }
 
-.btn-light {
+.contentCard {
+  background-color: var(--kb-surface);
+  color: var(--kb-text);
+  border: 1px solid var(--kb-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contentCardBody {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.buttonLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.buttonLinkSubtle {
   background-color: var(--kb-surface-subtle);
   color: var(--kb-text);
   border-color: var(--kb-border);
 }
 
-.btn-light:hover,
-.btn-light:focus-visible {
+.buttonLinkSubtle:hover,
+.buttonLinkSubtle:focus-visible {
   background-color: var(--kb-surface);
   color: var(--kb-text);
   border-color: var(--kb-text);
 }
 
-.btn-outline-dark {
-  --bs-btn-color: var(--kb-text);
-  --bs-btn-border-color: var(--kb-border);
-  --bs-btn-hover-color: var(--kb-background);
-  --bs-btn-hover-bg: var(--kb-text);
-  --bs-btn-hover-border-color: var(--kb-text);
-  --bs-btn-active-color: var(--kb-background);
-  --bs-btn-active-bg: var(--kb-text);
-  --bs-btn-active-border-color: var(--kb-text);
+.buttonLinkOutline {
+  background-color: transparent;
+  color: var(--kb-text);
+  border-color: var(--kb-border);
+}
+
+.buttonLinkOutline:hover,
+.buttonLinkOutline:focus-visible {
+  background-color: var(--kb-text);
+  color: var(--kb-background);
+  border-color: var(--kb-text);
 }

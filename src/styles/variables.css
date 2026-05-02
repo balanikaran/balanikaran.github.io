@@ -12,14 +12,6 @@
   --kb-muted: #7c7c7c;
   --kb-border: #d4d4d4;
   --kb-focus: rgba(13, 110, 253, 0.3);
-
-  --bs-body-font-family: var(--font-family-jetbrains-mono);
-  --bs-body-bg: var(--kb-background);
-  --bs-body-color: var(--kb-text);
-  --bs-card-bg: var(--kb-surface);
-  --bs-card-color: var(--kb-text);
-  --bs-border-color: var(--kb-border);
-  --bs-border-color-translucent: var(--kb-border);
 }
 
 html[data-theme="dark"] {
@@ -32,10 +24,4 @@ html[data-theme="dark"] {
   --kb-muted: #b8b8b8;
   --kb-border: #3a3a3a;
   --kb-focus: rgba(248, 249, 250, 0.28);
-
-  --bs-emphasis-color: var(--kb-text);
-  --bs-heading-color: var(--kb-text);
-  --bs-secondary-color: var(--kb-muted);
-  --bs-link-color: var(--kb-text);
-  --bs-link-hover-color: #ffffff;
 }

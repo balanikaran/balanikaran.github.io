@@ -18,10 +18,10 @@ const navItems = [
 ]
 ---
 
-<nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
-  <a class="navbar-brand navbarBrand" href="/">Karan Balani</a>
+<nav class="siteNav" aria-label="Primary navigation">
+  <a class="siteNavBrand" href="/">Karan Balani</a>
   <button
-    class="navbar-toggler navbarToggle"
+    class="siteNavToggle"
     type="button"
     aria-controls="navbar"
     aria-expanded="false"
@@ -30,16 +30,12 @@ const navItems = [
   >
     <span role="img" aria-label="navbar toggle">💭🔦</span>
   </button>
-  <div
-    id="navbar"
-    class="collapse navbar-collapse justify-content-end"
-    data-nav-menu
-  >
-    <div class="navbar-nav ml-auto">
+  <div id="navbar" class="siteNavMenu" data-nav-menu>
+    <div class="siteNavList">
       {
         navItems.map(item => (
           <a
-            class="nav-link navLink"
+            class="siteNavLink"
             href={item.href}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noopener noreferrer" : undefined}

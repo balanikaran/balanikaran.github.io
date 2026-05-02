@@ -27,21 +27,19 @@ const iconText: Record<string, string> = {
   <div class="projectsGrid">
     {
       projects.map(project => (
-        <article class="card">
+        <article class="contentCard">
           <div class="projectCard">
             <div class="projectCardImgDiv">
               <Image src={project.image} width={120} height={120} alt="" />
             </div>
-            <div class="card-body">
-              <h3 class="card-title projectTitleText">{project.name}</h3>
-              <p class="card-text projectDescriptionText">
-                {project.description}
-              </p>
+            <div class="contentCardBody">
+              <h3 class="projectTitleText">{project.name}</h3>
+              <p class="projectDescriptionText">{project.description}</p>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href={project.url}
-                class="btn btn-outline-dark projectLinkButton"
+                class="buttonLink buttonLinkOutline projectLinkButton"
               >
                 <Icon name={project.icon} size={24} />
                 <span>{iconText[project.icon] ?? "Open"}</span>
@@ -57,7 +55,7 @@ const iconText: Record<string, string> = {
       target="_blank"
       rel="noopener noreferrer"
       href="https://github.com/balanikaran"
-      class="btn btn-outline-dark btn-block projectLinkButton"
+      class="buttonLink buttonLinkOutline projectLinkButton projectLinkButtonFull"
     >
       <span>Explore more of my experiments on my</span>
       <Icon name="FaGithub" size={24} />

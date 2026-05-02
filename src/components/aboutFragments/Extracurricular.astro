@@ -20,7 +20,7 @@ const extracurriculars = aboutData.extracurriculars.map(extracurricular => ({
     {
       extracurriculars.map(extracurricular => (
         <article
-          class="card"
+          class="contentCard"
           aria-label={`${extracurricular.name}, ${extracurricular.role}`}
         >
           <div class="extracurricularCard">
@@ -32,14 +32,10 @@ const extracurriculars = aboutData.extracurriculars.map(extracurricular => ({
                 alt=""
               />
             </div>
-            <div class="card-body">
-              <h3 class="card-title extracurricularTitleText">
-                {extracurricular.name}
-              </h3>
-              <p class="card-text extracurricularRoleText">
-                {extracurricular.role}
-              </p>
-              <p class="card-text extracurricularDurationText">
+            <div class="contentCardBody">
+              <h3 class="extracurricularTitleText">{extracurricular.name}</h3>
+              <p class="extracurricularRoleText">{extracurricular.role}</p>
+              <p class="extracurricularDurationText">
                 {extracurricular.duration}
               </p>
             </div>
