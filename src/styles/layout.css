@@ -1,5 +1,5 @@
 html {
-  font-family: $fontFamilyRobotoMono;
+  font-family: var(--font-family-roboto-mono);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -9,6 +9,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--font-family-roboto-mono);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
 }

@@ -18,19 +18,16 @@
   grid-template-columns: 1fr;
   width: 100%;
   gap: 30px;
-  @media (max-width: $mobileMax) {
-    gap: 20px;
-  }
 }
 
 .projectCardImgDiv {
   margin: 20px 20px 0px 20px;
+}
 
-  img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-  }
+.projectCardImgDiv img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
 .projectTitleText {
@@ -51,4 +48,10 @@
 
 .btn-block.projectLinkButton {
   width: 100%;
+}
+
+@media (max-width: 950px) {
+  .projectsGrid {
+    gap: 20px;
+  }
 }

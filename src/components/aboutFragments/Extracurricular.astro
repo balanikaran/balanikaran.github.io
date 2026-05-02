@@ -9,7 +9,10 @@ const extracurriculars = aboutData.extracurriculars.map(extracurricular => ({
 }))
 ---
 
-<section class="extracurricularFragment" aria-labelledby="extracurricular-heading">
+<section
+  class="extracurricularFragment"
+  aria-labelledby="extracurricular-heading"
+>
   <h2 id="extracurricular-heading" class="extracurricularFragHeading">
     Extracurricular <span role="img" aria-label="extracurricular">🏌</span>
   </h2>
@@ -22,7 +25,12 @@ const extracurriculars = aboutData.extracurriculars.map(extracurricular => ({
         >
           <div class="extracurricularCard">
             <div class="extracurricularCardImgDiv">
-              <Image src={extracurricular.image} width={80} height={80} alt="" />
+              <Image
+                src={extracurricular.image}
+                width={80}
+                height={80}
+                alt=""
+              />
             </div>
             <div class="card-body">
               <h3 class="card-title extracurricularTitleText">

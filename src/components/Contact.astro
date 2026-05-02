@@ -5,7 +5,11 @@ import contactData from "../data/contact/contact.json"
 const contacts = contactData.contacts
 ---
 
-<section class="contactDiv" id="contactSectionId" aria-labelledby="contact-heading">
+<section
+  class="contactDiv"
+  id="contactSectionId"
+  aria-labelledby="contact-heading"
+>
   <h2 id="contact-heading" class="contactHeading">
     Let's get connected <span role="img" aria-label="experience">🔗</span>
   </h2>
@@ -14,7 +18,11 @@ const contacts = contactData.contacts
       contacts.map(contact => (
         <a
           target={contact.url.startsWith("mailto:") ? undefined : "_blank"}
-          rel={contact.url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+          rel={
+            contact.url.startsWith("mailto:")
+              ? undefined
+              : "noopener noreferrer"
+          }
           href={contact.url}
           class="btn btn-light contactButton"
           aria-label={contact.name}

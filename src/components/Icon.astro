@@ -1,61 +1,24 @@
 ---
-import {
-  ExternalLink,
-  Mail,
-  Play,
-} from "@lucide/astro"
+import { Icon as AstroIcon } from "astro-icon/components"
+import { ExternalLink } from "@lucide/astro"
 
 const { name, size = 24 } = Astro.props
 
-const icons = {
-  FaEnvelope: Mail,
-  FaGooglePlay: Play,
+const socialIcons = {
+  FaEnvelope: "social/envelope-at",
+  FaGithub: "social/github",
+  FaGooglePlay: "social/google-play",
+  FaInstagram: "social/instagram",
+  FaLinkedin: "social/linkedin",
 }
 
-const LucideIcon = icons[name] ?? ExternalLink
+const SocialIcon = socialIcons[name]
 ---
 
 {
-  name === "FaGithub" && (
-    <svg
-      aria-hidden="true"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.9 4.6 18 5 18 5c.7 1.7.3 2.9.1 3.2.8.9 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z" />
-    </svg>
-  )
-}
-{
-  name === "FaInstagram" && (
-    <svg
-      aria-hidden="true"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.7 1.5a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 7.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Z" />
-    </svg>
-  )
-}
-{
-  name === "FaLinkedin" && (
-    <svg
-      aria-hidden="true"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5V9h3v10ZM6.5 7.7A1.7 1.7 0 1 1 6.5 4a1.7 1.7 0 0 1 0 3.7ZM19 19h-3v-5.2c0-1.2-.4-2-1.5-2-.8 0-1.3.5-1.5 1.1-.1.2-.1.5-.1.7V19h-3V9h3v1.4A3.2 3.2 0 0 1 15.8 8c2.1 0 3.2 1.4 3.2 4.2V19Z" />
-    </svg>
-  )
-}
-{
-  !["FaGithub", "FaInstagram", "FaLinkedin"].includes(name) && (
-    <LucideIcon aria-hidden="true" size={size} strokeWidth={2} />
+  SocialIcon ? (
+    <AstroIcon name={SocialIcon} aria-hidden="true" size={size} />
+  ) : (
+    <ExternalLink aria-hidden="true" size={size} strokeWidth={2} />
   )
 }

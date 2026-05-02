@@ -16,7 +16,11 @@ const iconText = {
 }
 ---
 
-<section class="projectsDiv" id="projectsSectionId" aria-labelledby="projects-heading">
+<section
+  class="projectsDiv"
+  id="projectsSectionId"
+  aria-labelledby="projects-heading"
+>
   <h2 id="projects-heading" class="projectsHeading">
     Projects <span role="img" aria-label="projects">⚗️</span>
   </h2>
@@ -30,7 +34,9 @@ const iconText = {
             </div>
             <div class="card-body">
               <h3 class="card-title projectTitleText">{project.name}</h3>
-              <p class="card-text projectDescriptionText">{project.description}</p>
+              <p class="card-text projectDescriptionText">
+                {project.description}
+              </p>
               <a
                 target="_blank"
                 rel="noopener noreferrer"

@@ -20,9 +20,6 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 120px 0px 120px;
-  @media (max-width: $mobileMax) {
-    padding: 20px 10px 0px 10px;
-  }
 }
 
 .contactButton {
@@ -31,4 +28,10 @@
   justify-content: center;
   width: 3.5rem;
   height: 3.5rem;
+}
+
+@media (max-width: 950px) {
+  .contactSection {
+    padding: 20px 10px 0px 10px;
+  }
 }

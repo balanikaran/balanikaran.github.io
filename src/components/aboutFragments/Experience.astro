@@ -16,7 +16,10 @@ const experiences = aboutData.experiences.map(experience => ({
   <div class="experienceGrid">
     {
       experiences.map(experience => (
-        <article class="card" aria-label={`${experience.name}, ${experience.role}`}>
+        <article
+          class="card"
+          aria-label={`${experience.name}, ${experience.role}`}
+        >
           <div class="experienceCard">
             <div class="experienceCardImgDiv">
               <Image src={experience.image} width={80} height={80} alt="" />
@@ -24,7 +27,9 @@ const experiences = aboutData.experiences.map(experience => ({
             <div class="card-body">
               <h3 class="card-title experienceTitleText">{experience.name}</h3>
               <p class="card-text experienceRoleText">{experience.role}</p>
-              <p class="card-text experienceDurationText">{experience.duration}</p>
+              <p class="card-text experienceDurationText">
+                {experience.duration}
+              </p>
             </div>
           </div>
         </article>

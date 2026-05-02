@@ -1,5 +1,4 @@
 .experienceFragHeading {
-  // text-align: center;
   font-size: 1.7rem;
   text-align: center;
   padding: 20px;
@@ -10,10 +9,6 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   gap: 30px;
-  @media (max-width: $mobileMax) {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 }
 
 .experienceCard {
@@ -25,12 +20,12 @@
 .experienceCardImgDiv {
   margin: 10px 5px 10px 10px;
   display: flex;
+}
 
-  img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-  }
+.experienceCardImgDiv img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .experienceRoleText {
@@ -45,4 +40,11 @@
 .experienceDurationText {
   margin: 0px;
   font-size: 0.8rem;
+}
+
+@media (max-width: 950px) {
+  .experienceGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }

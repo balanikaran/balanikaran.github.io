@@ -1,0 +1,27 @@
+.navbarToggle {
+  border: 0px solid transparent;
+}
+
+.navbarBrand {
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.navLink {
+  margin-left: 0;
+}
+
+.navbar-nav {
+  align-items: flex-end;
+}
+
+@media (max-width: 950px) {
+  .navbarBrand,
+  .navLink {
+    margin-left: 0.75rem;
+  }
+
+  .navbar-nav {
+    align-items: flex-start;
+  }
+}

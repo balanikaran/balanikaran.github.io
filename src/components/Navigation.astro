@@ -1,7 +1,12 @@
 ---
 const navItems = [
   { href: "#aboutSectionId", label: "About", emoji: "🙋", aria: "about" },
-  { href: "#projectsSectionId", label: "Projects", emoji: "💻", aria: "projects" },
+  {
+    href: "#projectsSectionId",
+    label: "Projects",
+    emoji: "💻",
+    aria: "projects",
+  },
   { href: "#contactSectionId", label: "Contact", emoji: "🍻", aria: "contact" },
   {
     href: "https://sevenbits.hashnode.dev/",
@@ -25,7 +30,11 @@ const navItems = [
   >
     <span role="img" aria-label="navbar toggle">💭🔦</span>
   </button>
-  <div id="navbar" class="collapse navbar-collapse justify-content-end" data-nav-menu>
+  <div
+    id="navbar"
+    class="collapse navbar-collapse justify-content-end"
+    data-nav-menu
+  >
     <div class="navbar-nav ml-auto">
       {
         navItems.map(item => (

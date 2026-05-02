@@ -1,5 +1,5 @@
-@import "./experience";
-@import "./extracurricular";
+@import "./experience.css";
+@import "./extracurricular.css";
 
 .aboutDiv {
   display: flex;
