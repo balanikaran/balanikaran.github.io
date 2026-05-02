@@ -20,17 +20,7 @@ const navItems = [
 
 <nav class="siteNav" aria-label="Primary navigation">
   <a class="siteNavBrand" href="/">Karan Balani</a>
-  <button
-    class="siteNavToggle"
-    type="button"
-    aria-controls="navbar"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-    data-nav-toggle
-  >
-    <span role="img" aria-label="navbar toggle">💭🔦</span>
-  </button>
-  <div id="navbar" class="siteNavMenu" data-nav-menu>
+  <div class="siteNavMenu">
     <div class="siteNavList">
       {
         navItems.map(item => (
@@ -50,20 +40,3 @@ const navItems = [
     </div>
   </div>
 </nav>
-
-<script>
-  const toggle = document.querySelector("[data-nav-toggle]")
-  const menu = document.querySelector("[data-nav-menu]")
-
-  toggle?.addEventListener("click", () => {
-    const isOpen = menu?.classList.toggle("show") ?? false
-    toggle.setAttribute("aria-expanded", String(isOpen))
-  })
-
-  menu?.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("show")
-      toggle?.setAttribute("aria-expanded", "false")
-    })
-  })
-</script>

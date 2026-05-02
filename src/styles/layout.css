@@ -48,6 +48,12 @@ a {
   padding: 0 0.75rem;
 }
 
+@media (max-width: 1320px) {
+  .siteContainer {
+    padding: 0 1.5rem;
+  }
+}
+
 .contentCard {
   background-color: var(--kb-surface);
   color: var(--kb-text);
