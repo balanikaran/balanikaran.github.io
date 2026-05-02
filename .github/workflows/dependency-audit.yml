@@ -1,0 +1,39 @@
+name: Dependency Audit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - feat/move-to-astro
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: pnpm audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Audit production dependencies
+        run: corepack pnpm audit --prod --audit-level moderate
+        continue-on-error: true
