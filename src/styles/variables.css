@@ -9,17 +9,9 @@
   --kb-surface: #ffffff;
   --kb-surface-subtle: #f8f9fa;
   --kb-text: #212529;
-  --kb-muted: #7c7c7c;
+  --kb-muted: #5f6368;
   --kb-border: #d4d4d4;
   --kb-focus: rgba(13, 110, 253, 0.3);
-
-  --bs-body-font-family: var(--font-family-jetbrains-mono);
-  --bs-body-bg: var(--kb-background);
-  --bs-body-color: var(--kb-text);
-  --bs-card-bg: var(--kb-surface);
-  --bs-card-color: var(--kb-text);
-  --bs-border-color: var(--kb-border);
-  --bs-border-color-translucent: var(--kb-border);
 }
 
 html[data-theme="dark"] {
@@ -29,13 +21,7 @@ html[data-theme="dark"] {
   --kb-surface: #181818;
   --kb-surface-subtle: #202020;
   --kb-text: #f3f3f3;
-  --kb-muted: #b8b8b8;
+  --kb-muted: #c4c4c4;
   --kb-border: #3a3a3a;
   --kb-focus: rgba(248, 249, 250, 0.28);
-
-  --bs-emphasis-color: var(--kb-text);
-  --bs-heading-color: var(--kb-text);
-  --bs-secondary-color: var(--kb-muted);
-  --bs-link-color: var(--kb-text);
-  --bs-link-hover-color: #ffffff;
 }

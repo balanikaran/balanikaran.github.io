@@ -1,19 +1,25 @@
-# Karan Balani Portfolio
+# Karan Balani
 
-Personal portfolio for Karan Balani, built with Astro 6.
+[![CI](https://github.com/balanikaran/balanikaran.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/balanikaran/balanikaran.github.io/actions/workflows/ci.yml)
+[![Link Check](https://github.com/balanikaran/balanikaran.github.io/actions/workflows/link-check.yml/badge.svg)](https://github.com/balanikaran/balanikaran.github.io/actions/workflows/link-check.yml)
+
+Personal website for Karan Balani, built with Astro 6 and deployed at
+[karanbalani.tech](https://karanbalani.tech).
 
 ## Tech
 
 - Astro 6
-- pnpm
-- Bootstrap 5
-- Sass
-- Lucide icons
+- pnpm 10
+- Node.js 24
+- Astro Image
+- Astro Sitemap
+- Astro Icon
+- Bootstrap Icons SVGs
 
 ## Local Development
 
-Use Node `22.12.0` or newer. Corepack is recommended so the pinned pnpm
-version in `package.json` is used automatically.
+Use Node.js `24.x`. Corepack is recommended so the pinned pnpm version in
+`package.json` is used automatically.
 
 ```sh
 corepack enable
@@ -34,11 +40,13 @@ Astro writes the production build to `dist/`.
 
 ## Deploy
 
+This site is intended for Vercel or Cloudflare Pages.
+
 ### Cloudflare Pages
 
 - Build command: `pnpm build`
 - Build output directory: `dist`
-- Node version: `22.12.0` or newer
+- Node version: `24.x`
 
 For analytics, enable Cloudflare Web Analytics in the Pages project under
 Metrics. Cloudflare injects the beacon on the next deployment, so this repo does
@@ -52,3 +60,4 @@ Vercel detects Astro automatically.
 - Build command: `pnpm build`
 - Output directory: `dist`
 - Install command: `pnpm install --frozen-lockfile`
+- Node.js version: `24.x`

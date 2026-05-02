@@ -5,7 +5,14 @@ import webKb from "../images/web-kb.png"
 
 <section class="heading" aria-labelledby="intro-heading">
   <div class="headerImage">
-    <Image src={webKb} alt="Karan Balani" loading="eager" />
+    <Image
+      src={webKb}
+      alt="Karan Balani"
+      loading="eager"
+      fetchpriority="high"
+      widths={[320, 480, 640, 800, 1200, 1600]}
+      sizes="(max-width: 950px) 350px, 800px"
+    />
   </div>
   <div class="headerText">
     <h1 id="intro-heading" class="headerName">

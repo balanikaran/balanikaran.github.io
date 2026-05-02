@@ -17,19 +17,17 @@ const experiences = aboutData.experiences.map(experience => ({
     {
       experiences.map(experience => (
         <article
-          class="card"
+          class="contentCard"
           aria-label={`${experience.name}, ${experience.role}`}
         >
           <div class="experienceCard">
             <div class="experienceCardImgDiv">
               <Image src={experience.image} width={80} height={80} alt="" />
             </div>
-            <div class="card-body">
-              <h3 class="card-title experienceTitleText">{experience.name}</h3>
-              <p class="card-text experienceRoleText">{experience.role}</p>
-              <p class="card-text experienceDurationText">
-                {experience.duration}
-              </p>
+            <div class="contentCardBody">
+              <h3 class="experienceTitleText">{experience.name}</h3>
+              <p class="experienceRoleText">{experience.role}</p>
+              <p class="experienceDurationText">{experience.duration}</p>
             </div>
           </div>
         </article>
