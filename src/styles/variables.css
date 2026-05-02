@@ -3,6 +3,7 @@
     "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas,
     "Liberation Mono", monospace;
   --mobile-max: 950px;
+  --kb-navbar-height: 5rem;
 
   --kb-background: #ffffff;
   --kb-surface: #ffffff;

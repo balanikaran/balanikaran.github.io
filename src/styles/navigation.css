@@ -1,4 +1,6 @@
 .navbar {
+  height: var(--kb-navbar-height);
+  min-height: var(--kb-navbar-height);
   background-color: var(--kb-background);
   color: var(--kb-text);
 }
@@ -39,6 +41,10 @@
 }
 
 @media (max-width: 950px) {
+  .navbar {
+    height: auto;
+  }
+
   .navbarBrand,
   .navLink {
     margin-left: 0.75rem;
