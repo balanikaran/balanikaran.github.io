@@ -1,6 +1,12 @@
+.navbar {
+  background-color: var(--kb-background);
+  color: var(--kb-text);
+}
+
 .navbarToggle {
   border: 0;
   box-shadow: none;
+  color: var(--kb-text);
 }
 
 .navbarToggle:active,
@@ -13,10 +19,19 @@
 .navbarBrand {
   font-weight: 600;
   font-size: x-large;
+  color: var(--kb-text);
+}
+
+.navbarBrand:hover,
+.navbarBrand:focus-visible,
+.navLink:hover,
+.navLink:focus-visible {
+  color: var(--kb-text);
 }
 
 .navLink {
   margin-left: 0;
+  color: var(--kb-muted);
 }
 
 .navbar-nav {

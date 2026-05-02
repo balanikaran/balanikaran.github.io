@@ -4,14 +4,20 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-jetbrains-mono);
+  background-color: var(--kb-background);
+  color: var(--kb-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 button {
@@ -20,4 +26,34 @@ button {
 
 a {
   outline: none !important;
+}
+
+.card {
+  background-color: var(--kb-surface);
+  color: var(--kb-text);
+  border-color: var(--kb-border);
+}
+
+.btn-light {
+  background-color: var(--kb-surface-subtle);
+  color: var(--kb-text);
+  border-color: var(--kb-border);
+}
+
+.btn-light:hover,
+.btn-light:focus-visible {
+  background-color: var(--kb-surface);
+  color: var(--kb-text);
+  border-color: var(--kb-text);
+}
+
+.btn-outline-dark {
+  --bs-btn-color: var(--kb-text);
+  --bs-btn-border-color: var(--kb-border);
+  --bs-btn-hover-color: var(--kb-background);
+  --bs-btn-hover-bg: var(--kb-text);
+  --bs-btn-hover-border-color: var(--kb-text);
+  --bs-btn-active-color: var(--kb-background);
+  --bs-btn-active-bg: var(--kb-text);
+  --bs-btn-active-border-color: var(--kb-text);
 }

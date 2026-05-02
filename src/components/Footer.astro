@@ -1,8 +1,39 @@
 ---
+import Icon from "./Icon.astro"
+
 const year = new Date().getFullYear()
+
+const themeOptions = [
+  { value: "system", label: "System", icon: "BsCircleHalf" },
+  { value: "light", label: "Light", icon: "BsSunFill" },
+  { value: "dark", label: "Dark", icon: "BsMoonStarsFill" },
+]
 ---
 
 <footer class="footerDiv">
+  <div class="themeControls">
+    <button
+      class="themeModeButton"
+      type="button"
+      data-theme-toggle
+      data-theme-current="system"
+      aria-label="Color theme: System. Click to switch to Light."
+    >
+      {
+        themeOptions.map(option => (
+          <span
+            class="themeModeOption"
+            data-theme-state={option.value}
+            hidden={option.value !== "system"}
+            aria-hidden={option.value === "system" ? "false" : "true"}
+          >
+            <Icon name={option.icon} size={16} />
+            <span>{option.label}</span>
+          </span>
+        ))
+      }
+    </button>
+  </div>
   <p class="footerHeading">-x- Yep! This is Footer! -x-</p>
   <p>
     It was nice to have you here, see you around!
@@ -12,3 +43,95 @@ const year = new Date().getFullYear()
   <small>All Rights Reserved.</small>
   <small>Built with <a href="https://astro.build/">Astro</a></small>
 </footer>
+
+<script>
+  type ThemePreference = "system" | "light" | "dark"
+  type ResolvedTheme = "light" | "dark"
+
+  const themeStorageKey = "kb-theme"
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+  const themeChoices = ["system", "light", "dark"] as const
+  const themeLabels: Record<ThemePreference, string> = {
+    system: "System",
+    light: "Light",
+    dark: "Dark",
+  }
+  const themeToggle = document.querySelector<HTMLButtonElement>(
+    "[data-theme-toggle]",
+  )
+  const themeStates = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-theme-state]"),
+  )
+
+  const isThemePreference = (value: string): value is ThemePreference =>
+    themeChoices.includes(value as ThemePreference)
+
+  const resolveTheme = (preference: ThemePreference): ResolvedTheme =>
+    preference === "system"
+      ? mediaQuery.matches
+        ? "dark"
+        : "light"
+      : preference
+
+  const getThemePreference = (): ThemePreference => {
+    const preference = document.documentElement.dataset.themePreference
+
+    return preference && isThemePreference(preference) ? preference : "system"
+  }
+
+  const getNextThemePreference = (
+    preference: ThemePreference,
+  ): ThemePreference =>
+    themeChoices[(themeChoices.indexOf(preference) + 1) % themeChoices.length]
+
+  const updateThemeButton = () => {
+    if (!themeToggle) {
+      return
+    }
+
+    const preference = getThemePreference()
+    const nextPreference = getNextThemePreference(preference)
+
+    themeToggle.dataset.themeCurrent = preference
+    themeToggle.setAttribute(
+      "aria-label",
+      `Color theme: ${themeLabels[preference]}. Click to switch to ${
+        themeLabels[nextPreference]
+      }.`,
+    )
+
+    themeStates.forEach(state => {
+      const isActive = state.dataset.themeState === preference
+      state.hidden = !isActive
+      state.setAttribute("aria-hidden", String(!isActive))
+    })
+  }
+
+  const setThemePreference = (preference: ThemePreference) => {
+    const theme = resolveTheme(preference)
+
+    document.documentElement.dataset.themePreference = preference
+    document.documentElement.dataset.theme = theme
+    document.documentElement.dataset.bsTheme = theme
+
+    try {
+      localStorage.setItem(themeStorageKey, preference)
+    } catch {
+      // Ignore storage failures in restricted browsing modes.
+    }
+
+    updateThemeButton()
+    window.dispatchEvent(
+      new CustomEvent("kb-theme-change", {
+        detail: { preference, theme },
+      }),
+    )
+  }
+
+  themeToggle?.addEventListener("click", () =>
+    setThemePreference(getNextThemePreference(getThemePreference())),
+  )
+
+  window.addEventListener("kb-theme-change", updateThemeButton)
+  updateThemeButton()
+</script>

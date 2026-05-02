@@ -33,7 +33,7 @@
 
 .headerNameSubtext {
   font-size: 1.2rem;
-  color: rgb(124, 124, 124);
+  color: var(--kb-muted);
   margin-top: 20px;
   padding-left: 80px;
   padding-right: 80px;

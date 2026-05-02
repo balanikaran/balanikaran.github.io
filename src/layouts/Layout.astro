@@ -16,10 +16,57 @@ const socialImageUrl = new URL(webKb.src, siteUrl)
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  data-theme="light"
+  data-theme-preference="system"
+  data-bs-theme="light"
+>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      const themeStorageKey = "kb-theme"
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+      const themeChoices = ["system", "light", "dark"]
+
+      const getStoredTheme = () => {
+        try {
+          const theme = localStorage.getItem(themeStorageKey)
+          return themeChoices.includes(theme) ? theme : "system"
+        } catch {
+          return "system"
+        }
+      }
+
+      const resolveTheme = preference =>
+        preference === "system"
+          ? mediaQuery.matches
+            ? "dark"
+            : "light"
+          : preference
+
+      const applyTheme = preference => {
+        const theme = resolveTheme(preference)
+        document.documentElement.dataset.themePreference = preference
+        document.documentElement.dataset.theme = theme
+        document.documentElement.dataset.bsTheme = theme
+      }
+
+      applyTheme(getStoredTheme())
+
+      mediaQuery.addEventListener("change", event => {
+        if (getStoredTheme() === "system") {
+          const theme = event.matches ? "dark" : "light"
+          applyTheme("system")
+          window.dispatchEvent(
+            new CustomEvent("kb-theme-change", {
+              detail: { preference: "system", theme },
+            }),
+          )
+        }
+      })
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />

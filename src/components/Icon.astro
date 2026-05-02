@@ -1,7 +1,10 @@
 ---
 import { Icon as AstroIcon } from "astro-icon/components"
 
-const socialIcons = {
+const icons = {
+  BsCircleHalf: "ui/circle-half",
+  BsMoonStarsFill: "ui/moon-stars-fill",
+  BsSunFill: "ui/sun-fill",
   FaEnvelope: "social/envelope-at",
   FaGithub: "social/github",
   FaGooglePlay: "social/google-play",
@@ -9,7 +12,7 @@ const socialIcons = {
   FaLinkedin: "social/linkedin",
 } as const
 
-type SocialIconName = keyof typeof socialIcons
+type IconName = keyof typeof icons
 
 interface Props {
   name?: string
@@ -18,10 +21,10 @@ interface Props {
 
 const { name, size = 24 } = Astro.props
 
-const isSocialIconName = (value: string): value is SocialIconName =>
-  Object.prototype.hasOwnProperty.call(socialIcons, value)
+const isIconName = (value: string): value is IconName =>
+  Object.prototype.hasOwnProperty.call(icons, value)
 
-const SocialIcon = name && isSocialIconName(name) ? socialIcons[name] : null
+const SiteIcon = name && isIconName(name) ? icons[name] : null
 ---
 
-{SocialIcon && <AstroIcon name={SocialIcon} aria-hidden="true" size={size} />}
+{SiteIcon && <AstroIcon name={SiteIcon} aria-hidden="true" size={size} />}
