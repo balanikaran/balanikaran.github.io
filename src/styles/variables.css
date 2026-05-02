@@ -1,5 +1,7 @@
 :root {
-  --font-family-roboto-mono: "Roboto Mono", monospace;
+  --font-family-jetbrains-mono:
+    "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
   --mobile-max: 950px;
-  --bs-body-font-family: var(--font-family-roboto-mono);
+  --bs-body-font-family: var(--font-family-jetbrains-mono);
 }

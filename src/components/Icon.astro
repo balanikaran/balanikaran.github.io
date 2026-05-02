@@ -1,8 +1,5 @@
 ---
 import { Icon as AstroIcon } from "astro-icon/components"
-import { ExternalLink } from "@lucide/astro"
-
-const { name, size = 24 } = Astro.props
 
 const socialIcons = {
   FaEnvelope: "social/envelope-at",
@@ -10,15 +7,21 @@ const socialIcons = {
   FaGooglePlay: "social/google-play",
   FaInstagram: "social/instagram",
   FaLinkedin: "social/linkedin",
+} as const
+
+type SocialIconName = keyof typeof socialIcons
+
+interface Props {
+  name?: string
+  size?: number | string
 }
 
-const SocialIcon = socialIcons[name]
+const { name, size = 24 } = Astro.props
+
+const isSocialIconName = (value: string): value is SocialIconName =>
+  Object.prototype.hasOwnProperty.call(socialIcons, value)
+
+const SocialIcon = name && isSocialIconName(name) ? socialIcons[name] : null
 ---
 
-{
-  SocialIcon ? (
-    <AstroIcon name={SocialIcon} aria-hidden="true" size={size} />
-  ) : (
-    <ExternalLink aria-hidden="true" size={size} strokeWidth={2} />
-  )
-}
+{SocialIcon && <AstroIcon name={SocialIcon} aria-hidden="true" size={size} />}

@@ -1,24 +1,25 @@
 {
-  "name": "karan-balani-astro-portfolio",
+  "name": "karan-balani-website",
   "private": true,
   "packageManager": "pnpm@10.32.1",
-  "description": "Portfolio for Karan Balani @balanikaran | @krnblni",
+  "description": "Website for Karan Balani @balanikaran",
   "version": "0.1.0",
   "author": "Karan Balani <karankbalani@gmail.com>",
   "engines": {
     "node": ">=22.12.0"
   },
   "dependencies": {
-    "@lucide/astro": "^1.14.0",
     "astro": "^6.0.0",
     "astro-icon": "^1.1.5",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3"
   },
   "keywords": [
     "astro",
@@ -34,11 +35,14 @@
     "glaufireauth",
     "yearprogressbot",
     "yearprogress",
-    "finbox"
+    "finbox",
+    "lyric",
+    "signoz"
   ],
   "license": "MIT",
   "scripts": {
     "build": "astro build",
+    "check": "astro check",
     "develop": "astro dev",
     "dev": "astro dev",
     "format": "prettier --write \"**/*.{astro,css,js,json,md,mjs,yml}\"",

@@ -1,5 +1,13 @@
 .navbarToggle {
-  border: 0px solid transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.navbarToggle:active,
+.navbarToggle:focus,
+.navbarToggle:focus-visible {
+  outline: 0;
+  box-shadow: none;
 }
 
 .navbarBrand {

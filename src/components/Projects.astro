@@ -9,7 +9,7 @@ const projects = projectData.projects.map(project => ({
   image: getImage(project.logo),
 }))
 
-const iconText = {
+const iconText: Record<string, string> = {
   FaGithub: "GitHub",
   FaGooglePlay: "Google Play",
   FaInstagram: "Instagram",
