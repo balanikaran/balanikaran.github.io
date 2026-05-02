@@ -40,6 +40,7 @@ const iconText: Record<string, string> = {
                 rel="noopener noreferrer"
                 href={project.url}
                 class="buttonLink buttonLinkOutline projectLinkButton"
+                aria-label={`${project.name} on ${iconText[project.icon] ?? "external site"}`}
               >
                 <Icon name={project.icon} size={24} />
                 <span>{iconText[project.icon] ?? "Open"}</span>

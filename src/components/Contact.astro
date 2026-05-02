@@ -3,6 +3,12 @@ import Icon from "./Icon.astro"
 import contactData from "../data/contact/contact.json"
 
 const contacts = contactData.contacts
+const contactLabels: Record<string, string> = {
+  Instagram: "Karan Balani on Instagram",
+  LinkedIn: "Karan Balani on LinkedIn",
+  GitHub: "Karan Balani on GitHub",
+  Email: "Email Karan Balani",
+}
 ---
 
 <section
@@ -25,8 +31,8 @@ const contacts = contactData.contacts
           }
           href={contact.url}
           class="buttonLink buttonLinkSubtle contactButton"
-          aria-label={contact.name}
-          title={contact.name}
+          aria-label={contactLabels[contact.name] ?? contact.name}
+          title={contactLabels[contact.name] ?? contact.name}
         >
           <Icon name={contact.icon} size={32} />
         </a>
