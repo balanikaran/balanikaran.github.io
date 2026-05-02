@@ -1,0 +1,51 @@
+---
+import Navigation from "../components/Navigation.astro"
+import webKb from "../images/web-kb.png"
+import "../styles/index.scss"
+
+const {
+  title = "Karan Balani | balanikaran",
+  description = "Karan's Personal Portfolio Website.",
+  keywords = "karan balani, karanbalani, developer, finbox, accenture, portfolio, astro",
+} = Astro.props
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="@balanikaran" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/png" href={webKb.src} />
+
+    <meta property="og:title" content="Karan Balani" />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={new URL(webKb.src, Astro.site)} />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="karanbalani_" />
+    <meta name="twitter:title" content="Karan Balani" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(webKb.src, Astro.site)} />
+    <meta
+      name="google-site-verification"
+      content="QwimcVG7Pjp3RAmephvUeHDTnOTNmXC97-RNNi6ir9w"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <Navigation />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

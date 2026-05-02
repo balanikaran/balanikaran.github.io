@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets"
+import Icon from "./Icon.astro"
+import projectData from "../data/projects/projects.json"
+import { getImage } from "../utils/images"
+
+const projects = projectData.projects.map(project => ({
+  ...project,
+  image: getImage(project.logo),
+}))
+
+const iconText = {
+  FaGithub: "GitHub",
+  FaGooglePlay: "Google Play",
+  FaInstagram: "Instagram",
+}
+---
+
+<section class="projectsDiv" id="projectsSectionId" aria-labelledby="projects-heading">
+  <h2 id="projects-heading" class="projectsHeading">
+    Projects <span role="img" aria-label="projects">⚗️</span>
+  </h2>
+  <div class="projectsGrid">
+    {
+      projects.map(project => (
+        <article class="card">
+          <div class="projectCard">
+            <div class="projectCardImgDiv">
+              <Image src={project.image} width={120} height={120} alt="" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title projectTitleText">{project.name}</h3>
+              <p class="card-text projectDescriptionText">{project.description}</p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={project.url}
+                class="btn btn-outline-dark projectLinkButton"
+              >
+                <Icon name={project.icon} size={24} />
+                <span>{iconText[project.icon] ?? "Open"}</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+  <div class="projectsGithubLinkButtonDiv">
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://github.com/balanikaran"
+      class="btn btn-outline-dark btn-block projectLinkButton"
+    >
+      <span>Explore more of my experiments on my</span>
+      <Icon name="FaGithub" size={24} />
+      <span>GitHub profile</span>
+    </a>
+  </div>
+</section>

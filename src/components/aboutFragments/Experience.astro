@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets"
+import aboutData from "../../data/about/about.json"
+import { getImage } from "../../utils/images"
+
+const experiences = aboutData.experiences.map(experience => ({
+  ...experience,
+  image: getImage(experience.logo),
+}))
+---
+
+<section class="experienceFragment" aria-labelledby="experience-heading">
+  <h2 id="experience-heading" class="experienceFragHeading">
+    Experience <span role="img" aria-label="experience">💻</span>
+  </h2>
+  <div class="experienceGrid">
+    {
+      experiences.map(experience => (
+        <article class="card" aria-label={`${experience.name}, ${experience.role}`}>
+          <div class="experienceCard">
+            <div class="experienceCardImgDiv">
+              <Image src={experience.image} width={80} height={80} alt="" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title experienceTitleText">{experience.name}</h3>
+              <p class="card-text experienceRoleText">{experience.role}</p>
+              <p class="card-text experienceDurationText">{experience.duration}</p>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

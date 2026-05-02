@@ -2,6 +2,7 @@
 logs
 *.log
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
@@ -41,6 +42,7 @@ typings/
 
 # Optional npm cache directory
 .npm
+.pnpm-store/
 
 # Optional eslint cache
 .eslintcache
@@ -54,9 +56,14 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
+# Astro files
 .cache/
-public
+.astro/
+dist/
+
+# Deployment tooling
+.vercel/
+.wrangler/
 
 # Mac files
 .DS_Store

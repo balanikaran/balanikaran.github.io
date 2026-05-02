@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets"
+import webKb from "../images/web-kb.png"
+---
+
+<section class="heading" aria-labelledby="intro-heading">
+  <div class="headerImage">
+    <Image src={webKb} alt="Karan Balani" loading="eager" />
+  </div>
+  <div class="headerText">
+    <h1 id="intro-heading" class="headerName">
+      Hey there <span role="img" aria-label="wave">👋</span> I'm Karan Balani
+      <span role="img" aria-label="boy with laptop">👨‍💻</span>
+    </h1>
+    <h2 class="headerNameSubtext">
+      I like to solve problems with tech
+      <span role="img" aria-label="joystick">🕹</span> and
+      <span role="img" aria-label="brain">🧠</span>. I'm MKBHD fan. And you know
+      what? I don't know swimming <span role="img" aria-label="swimmer">🏊‍♂️</span>!
+    </h2>
+  </div>
+</section>

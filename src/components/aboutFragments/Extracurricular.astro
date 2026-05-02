@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets"
+import aboutData from "../../data/about/about.json"
+import { getImage } from "../../utils/images"
+
+const extracurriculars = aboutData.extracurriculars.map(extracurricular => ({
+  ...extracurricular,
+  image: getImage(extracurricular.logo),
+}))
+---
+
+<section class="extracurricularFragment" aria-labelledby="extracurricular-heading">
+  <h2 id="extracurricular-heading" class="extracurricularFragHeading">
+    Extracurricular <span role="img" aria-label="extracurricular">🏌</span>
+  </h2>
+  <div class="extracurricularGrid">
+    {
+      extracurriculars.map(extracurricular => (
+        <article
+          class="card"
+          aria-label={`${extracurricular.name}, ${extracurricular.role}`}
+        >
+          <div class="extracurricularCard">
+            <div class="extracurricularCardImgDiv">
+              <Image src={extracurricular.image} width={80} height={80} alt="" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title extracurricularTitleText">
+                {extracurricular.name}
+              </h3>
+              <p class="card-text extracurricularRoleText">
+                {extracurricular.role}
+              </p>
+              <p class="card-text extracurricularDurationText">
+                {extracurricular.duration}
+              </p>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

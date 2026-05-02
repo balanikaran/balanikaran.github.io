@@ -15,3 +15,11 @@
     margin-left: 0.75rem; // because of cosmetics and bootstrap 5
   }
 }
+
+.navbar-nav {
+  align-items: flex-end;
+
+  @media (max-width: $mobileMax) {
+    align-items: flex-start;
+  }
+}

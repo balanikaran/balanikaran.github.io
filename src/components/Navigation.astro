@@ -1,0 +1,64 @@
+---
+const navItems = [
+  { href: "#aboutSectionId", label: "About", emoji: "🙋", aria: "about" },
+  { href: "#projectsSectionId", label: "Projects", emoji: "💻", aria: "projects" },
+  { href: "#contactSectionId", label: "Contact", emoji: "🍻", aria: "contact" },
+  {
+    href: "https://sevenbits.hashnode.dev/",
+    label: "Blog",
+    emoji: "✍️",
+    aria: "blog",
+    external: true,
+  },
+]
+---
+
+<nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+  <a class="navbar-brand navbarBrand" href="/">Karan Balani</a>
+  <button
+    class="navbar-toggler navbarToggle"
+    type="button"
+    aria-controls="navbar"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    data-nav-toggle
+  >
+    <span role="img" aria-label="navbar toggle">💭🔦</span>
+  </button>
+  <div id="navbar" class="collapse navbar-collapse justify-content-end" data-nav-menu>
+    <div class="navbar-nav ml-auto">
+      {
+        navItems.map(item => (
+          <a
+            class="nav-link navLink"
+            href={item.href}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noopener noreferrer" : undefined}
+          >
+            {item.label}{" "}
+            <span role="img" aria-label={item.aria}>
+              {item.emoji}
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector("[data-nav-toggle]")
+  const menu = document.querySelector("[data-nav-menu]")
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = menu?.classList.toggle("show") ?? false
+    toggle.setAttribute("aria-expanded", String(isOpen))
+  })
+
+  menu?.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("show")
+      toggle?.setAttribute("aria-expanded", "false")
+    })
+  })
+</script>

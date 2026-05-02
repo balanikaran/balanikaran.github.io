@@ -25,6 +25,12 @@
 
 .projectCardImgDiv {
   margin: 20px 20px 0px 20px;
+
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
 }
 
 .projectTitleText {
@@ -33,4 +39,16 @@
 
 .projectsGithubLinkButtonDiv {
   margin-top: 35px;
+}
+
+.projectLinkButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  white-space: normal;
+}
+
+.btn-block.projectLinkButton {
+  width: 100%;
 }
