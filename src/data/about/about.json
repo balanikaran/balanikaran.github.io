@@ -1,6 +1,18 @@
 {
   "experiences": [
     {
+      "name": "SigNoz",
+      "role": "Platform Engineer",
+      "duration": "Nov 2025 - Present",
+      "logo": "signoz.png"
+    },
+    {
+      "name": "Lyric",
+      "role": "Senior Software Engineer",
+      "duration": "Apr 2025 - Oct 2025",
+      "logo": "lyric.svg"
+    },
+    {
       "name": "FinBox",
       "role": "Senior Software Engineer",
       "duration": "Jun 2024 - Apr 2025",
