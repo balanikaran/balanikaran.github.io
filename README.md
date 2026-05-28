@@ -1,7 +1,7 @@
 # Karan Balani
 
-[![CI](https://github.com/karanbalani/balanikaran.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/karanbalani/balanikaran.github.io/actions/workflows/ci.yml)
-[![Link Check](https://github.com/karanbalani/balanikaran.github.io/actions/workflows/link-check.yml/badge.svg)](https://github.com/karanbalani/balanikaran.github.io/actions/workflows/link-check.yml)
+[![CI](https://github.com/karanbalani/karanbalani.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/karanbalani/karanbalani.github.io/actions/workflows/ci.yml)
+[![Link Check](https://github.com/karanbalani/karanbalani.github.io/actions/workflows/link-check.yml/badge.svg)](https://github.com/karanbalani/karanbalani.github.io/actions/workflows/link-check.yml)
 
 Personal website for Karan Balani, built with Astro 6 and deployed at
 [karanbalani.tech](https://karanbalani.tech).
