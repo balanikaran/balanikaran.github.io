@@ -2,7 +2,7 @@
   "name": "karan-balani-website",
   "private": true,
   "packageManager": "pnpm@10.32.1",
-  "description": "Website for Karan Balani @balanikaran",
+  "description": "Website for Karan Balani @karanbalani",
   "version": "0.1.0",
   "author": "Karan Balani <karankbalani@gmail.com>",
   "engines": {
@@ -26,7 +26,6 @@
     "balani",
     "karanbalani",
     "krnblni",
-    "balanikaran",
     "accenture",
     "glau",
     "glauniversity",
@@ -60,9 +59,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/balanikaran/balanikaran.github.io"
+    "url": "https://github.com/karanbalani/balanikaran.github.io"
   },
   "bugs": {
-    "url": "https://github.com/balanikaran/balanikaran.github.io/issues"
+    "url": "https://github.com/karanbalani/balanikaran.github.io/issues"
   }
 }
